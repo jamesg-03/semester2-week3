@@ -29,9 +29,10 @@ int main(void) {
    double takeHomeSalary = salaryAfterNI - taxContribution;
 
    // print output
-   printf("NI contribution £%.2f\n", niContribution);
-   printf("Tax paid £%.2f\n", taxContribution);
-   printf("Take home salary £%.2f\n", takeHomeSalary);
+   printf("Salary £%.2f\n",salary);
+   printf("NI contribution £%.2f\n",niContribution);
+   printf("Tax contribution £%.2f\n",taxContribution);
+   printf("Take home salary £%.2f\n",takeHomeSalary);
 
    return 0;
 }
