@@ -10,9 +10,9 @@
 int main(void) {
 
    // define variables
-   double salary = 36250;    
-   double NI = 8;        
-   double taxRate = 15;      
+   double salary = 30000;    
+   double NI = 9;        
+   double taxRate = 25;      
 
    // calculate NI and salary after
    double niContribution = salary * (NI / 100.0);
