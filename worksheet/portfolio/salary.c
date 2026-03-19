@@ -10,13 +10,13 @@
 int main(void) {
 
    // define variables
-   double salary = 36250.0;    
-   double NI = 8.0;        
-   double taxRate = 15.0;      
+   double salary = 36250;    
+   double NI = 8;        
+   double taxRate = 15;      
 
    // calculate NI and salary after
    double niContribution = salary * (NI / 100.0);
-   double salaryAfterNi = salary - niContribution;
+   double salaryAfterNI = salary - niContribution;
 
    // calculate income that can be taxed
    double taxableIncome = 0.0;
@@ -25,14 +25,13 @@ int main(void) {
    }
 
    // calculate tax and salary
-   double taxContribution = taxableIncome * (tax_rate / 100.0);
+   double taxContribution = taxableIncome * (taxRate / 100.0);
    double takeHomeSalary = salaryAfterNI - taxContribution;
 
    // print output
-   printf("Salary - £%.2f\n", salary);
-   printf("NI contribution - £%.2f\n", niContribution);
-   printf("Tax paid - £%.2f\n", taxContribution);
-   printf("Take home salary - £%.2f\n", takeHomeSalary);
+   printf("NI contribution £%.2f\n", niContribution);
+   printf("Tax paid £%.2f\n", taxContribution);
+   printf("Take home salary £%.2f\n", takeHomeSalary);
 
    return 0;
 }
