@@ -3,21 +3,36 @@
 
 /*
  * Potrfolio submission
- * Name:
- * ID:
+ * Name: James Graham
+ * ID: 202028828
  */
 
- int main( void ) {
+int main(void) {
 
-    // define and initialise variables for the problem data 
+   // define variables
+   double salary = 36250.0;    
+   double NI = 8.0;        
+   double taxRate = 15.0;      
 
-    // calculate the deductions and final take-home salary
+   // calculate NI and salary after
+   double niContribution = salary * (NI / 100.0);
+   double salaryAfterNi = salary - niContribution;
 
-    // Use only these print statement with appropriate formatting and variable names
-    //printf("Salary £...",var_name);
-    //printf("NI contribution £...",var_name);
-    //printf("Tax contribution £...",var_name);
-    //printf("Take home salary £...",var_name);
+   // calculate income that can be taxed
+   double taxableIncome = 0.0;
+   if (salaryAfterNI > 12500.0) {
+      taxableIncome = salaryAfterNI - 12500.0;
+   }
 
-    return 0;
- }
+   // calculate tax and salary
+   double taxContribution = taxableIncome * (tax_rate / 100.0);
+   double takeHomeSalary = salaryAfterNI - taxContribution;
+
+   // print output
+   printf("Salary - £%.2f\n", salary);
+   printf("NI contribution - £%.2f\n", niContribution);
+   printf("Tax paid - £%.2f\n", taxContribution);
+   printf("Take home salary - £%.2f\n", takeHomeSalary);
+
+   return 0;
+}
